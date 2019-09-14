@@ -28,3 +28,8 @@ h1, p {
 .form-row {
     justify-content: center;
 }
+
+.form-group {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
