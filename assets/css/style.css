@@ -1,4 +1,7 @@
-
+#map {
+    height: 400px;
+    width: 100%;
+}
 
 .jumbotron {
     background-image: url("http://source.colostate.edu/wp-content/uploads/2016/05/Rock-Band-Project.jpg");
@@ -17,6 +20,10 @@ form {
 h1, p {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+#instructions {
+   text-align: center;
 }
 
 .btn {

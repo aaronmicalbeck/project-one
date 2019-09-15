@@ -14,4 +14,5 @@ look it up separately on mulitples sites.
 
 Essential user stories:
 -Search for events around me.
--Being able to view everything in easy-to-read format. Listed nicely and convenient.  
+-Being able to view everything in easy-to-read format. Listed nicely and convenient.
+-Display results on map
