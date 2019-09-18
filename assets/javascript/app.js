@@ -1,5 +1,44 @@
 console.log(`Java is working!`);
 
+function getInput() {
+    event.preventDefault();
+    console.log(`button is working`);
+    // $(`#inputCity`).empty();
+    
+    let cityInput = $(`#inputCity`).val().trim();
+    let inputState = $(`#inputState`).val().trim();
+    
+
+    const settings1 = {
+        async: true,
+        crossDomain: true,
+        url: `https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=${cityInput},${inputState}`,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "devru-latitude-longitude-find-v1.p.rapidapi.com",
+            "x-rapidapi-key": "83433a047fmsh31c5f4e50fb1610p18af61jsn090f8ef0d26c"
+        }
+    }
+    
+
+    
+
+
+    $.ajax(settings1).done(function (response) {
+        console.log(response.Results);
+        let longitude = response.Results[0].lon;
+        let latitude = response.Results[0].lat;
+        // $(`#longitude`).text(`Longitude: ${longitude}`);
+        // $(`#latitude`).text(`Latitude: ${latitude}`);
+
+
+
+    });
+
+};
+
+$(`.btn`).on(`click`, getInput);
+
 
 
 function initMap(){
@@ -32,4 +71,5 @@ fetch('https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40C
 console.log(data.response.groups[0].items[0].venue.name, data.response.groups[0].items[0].venue.location.lat, data.response.groups[0].items[0].venue.location.lng);
     });
 
+    
     
