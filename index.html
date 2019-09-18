@@ -6,10 +6,13 @@
     <meta charset="utf-8">
     <link rel="icon" sizes="32x32" href="assets/images/music-radar.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--Reset CSS-->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -39,7 +42,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <h3>Give us your genre of choice and your location, and we will find events near you!</h3>
+                    <h3 id ="instructions">Give us your genre of choice and your location, and we will find events near you!</h3>
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-secondary btn-lg">Pop</button>
                         <button type="button" class="btn btn-secondary btn-lg">Rock</button>
@@ -226,6 +229,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWyV2zxsVly2hGTX_tUakCJvqQUgfqY3E&callback=initMap">
+        </script>
+
 </body>
 
 </html>
