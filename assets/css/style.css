@@ -6,8 +6,10 @@
 .jumbotron {
     background-image: url("http://source.colostate.edu/wp-content/uploads/2016/05/Rock-Band-Project.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
-    text-align: center
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
 }
 
 form {
@@ -17,8 +19,8 @@ form {
     margin-left: 80px;  
 }
 
-h1, p {
-    color: white;
+h1, p, h3 {
+    color: lightgrey;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -29,7 +31,7 @@ h1, p {
 .btn {
     margin: 10px;
     justify-content: center;
-    background-color: purple;
+    background-color: lightskyblue;
 }
 
 .form-row {
@@ -39,4 +41,8 @@ h1, p {
 .form-group {
     margin-left: 50px;
     margin-bottom: 50px;
+}
+
+body {
+    background-color: lavender;
 }
