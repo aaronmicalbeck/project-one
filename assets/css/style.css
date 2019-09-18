@@ -10,6 +10,24 @@
     background-size: cover;
     text-align: center;
     height: 100vh;
+    position: relative;
+}
+
+.jumbotron::after {
+    display: block;
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
 }
 
 form {
@@ -19,8 +37,8 @@ form {
     margin-left: 80px;  
 }
 
-h1, p, h3 {
-    color: lightgrey;
+h1, p, h3, label {
+    color: lightgray;
     font-family: 'Josefin Sans', sans-serif;
 }
 
