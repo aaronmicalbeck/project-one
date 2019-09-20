@@ -1,15 +1,11 @@
-console.log(`Java is working!`);
+console.log(`JavaScript is working!`);
 let map;
 
 
 // This function dynamically generates the table after hitting the submit button
 function drawTable(arr) {
   console.log(`table is working`);
-  // get the reference for the body
-  var div1 = $("#div1");
-
-  // creates a <table> element
-  var tbl = $("<table>");
+  $("#tBody").empty();  
 
   // creates R rows with 3 columns for the following queries: venue name, address, and distance away from the center of map
   for (var r = 0; r < arr.length; r++) {
@@ -22,10 +18,8 @@ function drawTable(arr) {
     row.append(c1);
     row.append(c2);
     row.append(c3);
-    tbl.append(row); // add the row to the end of the table body
+    $("#tBody").append(row); // add the row to the end of the table body
   }
-
-  div1.append(tbl); // appends <table> into <div1>
 }
 
 // SUBMIT FUNCTION THAT DOES IT ALLLLL
