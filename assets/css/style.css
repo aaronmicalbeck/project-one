@@ -4,7 +4,7 @@
 }
 
 .jumbotron {
-    background-image: url("http://source.colostate.edu/wp-content/uploads/2016/05/Rock-Band-Project.jpg");
+    background-image: url("https://wallpaper-gallery.net/images/music-background-pictures/music-background-pictures-9.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -16,7 +16,7 @@
 .jumbotron::after {
     display: block;
     content: "";
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2));
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
     height: 100%;
     position: absolute;
     top: 0;
