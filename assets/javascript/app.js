@@ -4,8 +4,18 @@ let map;
 
 // This function dynamically generates the table after hitting the submit button
 function drawTable(arr) {
-  console.log(`table is working`);
-  $("#tBody").empty();  
+  // <table class="table table-dark">
+  //           <tr>
+  //               <th>Venue</th>
+  //               <th>Location</th>
+  //               <th>Distance</th>
+  //           </tr>
+  //           <tbody id="tBody"></tbody>
+  //       </table>
+
+  $("#div1").empty();  
+$(`#div1`).append($(`<table>`).attr(`id`, `theTable`,).addClass(`table table-dark`));
+  // replicate table structure from above
 
   // creates R rows with 3 columns for the following queries: venue name, address, and distance away from the center of map
   for (var r = 0; r < arr.length; r++) {
@@ -18,7 +28,8 @@ function drawTable(arr) {
     row.append(c1);
     row.append(c2);
     row.append(c3);
-    $("#tBody").append(row); // add the row to the end of the table body
+    console.log(row);
+    $("#theTable").append(row); // add the row to the end of the table body
   }
 }
 
