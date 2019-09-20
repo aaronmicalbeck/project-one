@@ -1,18 +1,22 @@
 # project-one
 
-MVP:
+# Rhythm Radar\
+## Don't be lost in a sea of sound. We'll get you rocking out no matter where you are!
 
-Who is our target audience?
-Music lovers, people who want to find events, tourists/travelers.
+### Description:\
+The Rhythm Radar app is a new way of searching for concert venues in your area. By simply typing in your city, we are able to generate the what shows are happening in your area.
+Not only do we inform our users what shows are around for a weekend of fun, but we also display the location of the venue for your convenience! Now, you no longer have to 
+separately search for a show and then lookup the venue later. We do all the work for you!
 
-What is the problem that the product will address?
-Eliminates our audience from having to look everything up for an event separately.
+### Usage:\
+Let's say that you are visiting a friend or family member in a different city. Both of you are wondering what to do for the duration of time you will be visiting. You thn realize
+you have not attended a conert in such a long time! What a perfect thing to do on vacation. With the Rhythm Radar, you type in your location and within seconds you will get that concert
+you want to go to as well as a handy map with specifics on how to get there with google maps. What a convenient way to search for your next concert! 
 
-Primary goal?
-Easily look up shows/locations/venues in one search rather than having to 
-look it up separately on mulitples sites. 
 
-Essential user stories:
--Search for events around me.
--Being able to view everything in easy-to-read format. Listed nicely and convenient.
--Display results on map
+### Authors and Acknowledgements:\
+**Jorden Ragels**\
+**Aaron Beck**\
+**Marc Avalos**\
+**Zarit Ortiz**
+ 
