@@ -68,8 +68,16 @@ function getInput() {
   });
 }
 
-$(`.btn`).on(`click`, getInput);
+$(`.btn`).on(`click`, function(event){
+  event.preventDefault();
+  let table = $(`table`);
+  if (table){
+    table.empty();
+    console.log(table);
+  }
+  getInput();
 
+});
 // GOOGLE MAPS API
 
 function initMap(latitude, longitude) {
@@ -111,8 +119,6 @@ function fourSquare(latitude, longitude) {
       drawTable(data.response.groups[0].items);
     });
 }
-
-
 
 
 
