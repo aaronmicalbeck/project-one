@@ -104,9 +104,13 @@ fetch(`https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40C
    .then(response => response.json())
    .then(data =>{
 
+console.log(data.response);
+
+
     for (let i =0; i< data.response.groups[0].items.length; i++){
 createMarkers(data.response.groups[0].items[i].venue.location.lat, data.response.groups[0].items[i].venue.location.lng);
     }
+
    });
 };
 
