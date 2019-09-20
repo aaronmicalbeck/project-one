@@ -1,5 +1,7 @@
 console.log(`Java is working!`);
+let map;
 
+////////////////////////////////////////////////////
 function getInput() {
     event.preventDefault();
     console.log(`button is working`);
@@ -46,20 +48,22 @@ $(`.btn`).on(`click`, getInput);
 
 
 function initMap(latitude, longitude){
-    console.log(latitude, longitude);
+    // console.log(latitude, longitude);
 let options = {
     zoom: 10,
     center: {lat:latitude, lng: longitude }
 }   
-let map = new
+map = new
 google.maps.Map(document.getElementById(`map`), options);
 
+
+}
+function createMarkers(latitude, longitude){
 let marker = new google.maps.Marker({
     position: {lat:latitude, lng: longitude},
     map:map
 });
 }
-
 
 // FOURSQUARE API
 
@@ -67,9 +71,13 @@ function fourSquare(latitude, longitude){
 fetch(`https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40COJNGJ35QB2ZRQBZ3RZU33HGFBCEKLK&client_secret=USPSYAGMLHKZJLEUWVN02IVMVWSLOMWUJDJAIKV22O5YZHHY&v=20180323&limit=13&ll=` + latitude + `,` +longitude + `&query=venues`)
    .then(response => response.json())
    .then(data =>{
-console.log(data.response);
+
+    for (let i =0; i< data.response.groups[0].items.length; i++){
+createMarkers(data.response.groups[0].items[i].venue.location.lat, data.response.groups[0].items[i].venue.location.lng);
+    }
    });
 };
+
 
 
 
