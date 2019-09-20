@@ -1,11 +1,8 @@
 console.log(`Java is working!`);
 let map;
 
-var totalRows = 5;
-var cellsInRow = 5;
-var min = 1;
-var max = 10;
 
+// This function dynamically generates the table after hitting the submit button
 function drawTable(arr) {
   console.log(`table is working`);
   // get the reference for the body
@@ -14,8 +11,7 @@ function drawTable(arr) {
   // creates a <table> element
   var tbl = $("<table>");
 
-  // creating rows
-  // data.response.groups[0].items
+  // creates R rows with 3 columns for the following queries: venue name, address, and distance away from the center of map
   for (var r = 0; r < arr.length; r++) {
     var row = $("<tr>");
     let c1 = $("<td>").text(arr[r].venue.name);
@@ -57,6 +53,7 @@ function getInput() {
     }
   };
 
+  // AJAX call that gets the longitude and latitude of the query
   $.ajax(settings1).done(function(response) {
     console.log(response.Results);
     let longitude = Number(response.Results[0].lon);
