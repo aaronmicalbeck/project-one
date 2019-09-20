@@ -88,6 +88,7 @@ function createMarkers(latitude, longitude) {
 
 // FOURSQUARE API
 
+
 function fourSquare(latitude, longitude) {
   fetch(
     `https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40COJNGJ35QB2ZRQBZ3RZU33HGFBCEKLK&client_secret=USPSYAGMLHKZJLEUWVN02IVMVWSLOMWUJDJAIKV22O5YZHHY&v=20180323&limit=12&ll=` +
@@ -109,3 +110,30 @@ function fourSquare(latitude, longitude) {
       drawTable(data.response.groups[0].items);
     });
 }
+
+function fourSquare(latitude, longitude){
+fetch(`https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40COJNGJ35QB2ZRQBZ3RZU33HGFBCEKLK&client_secret=USPSYAGMLHKZJLEUWVN02IVMVWSLOMWUJDJAIKV22O5YZHHY&v=20180323&limit=13&ll=` + latitude + `,` +longitude + `&query=venues`)
+   .then(response => response.json())
+   .then(data =>{
+
+console.log(data.response);
+
+
+    for (let i =0; i< data.response.groups[0].items.length; i++){
+createMarkers(data.response.groups[0].items[i].venue.location.lat, data.response.groups[0].items[i].venue.location.lng);
+    }
+
+   });
+};
+
+
+
+
+
+
+
+
+
+    
+    
+
