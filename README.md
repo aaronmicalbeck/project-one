@@ -13,8 +13,8 @@ Let's say that you are visiting a friend or family member in a different city. B
 
 
 ### Authors and Acknowledgements:
-**Jorden Ragels**\
-**Aaron Beck**\
-**Marc Avalos**\
+**Jorden Ragels**
+**Aaron Beck**
+**Marc Avalos**
 **Zarit Ortiz**
  
