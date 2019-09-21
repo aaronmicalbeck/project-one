@@ -26,8 +26,9 @@ td {
   background-position: center;
   background-size: cover;
   text-align: center;
-  height: 50vh;
+  
   position: relative;
+  z-index: 1;
 }
 
 .jumbotron::after {
@@ -43,12 +44,12 @@ td {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 0;
 }
 
 .jumbotron .container {
   position: relative;
-  z-index: 2;
+
 }
 
 form {
@@ -71,8 +72,8 @@ label {
 }
 
 .btn {
-  margin: 10px;
-  justify-content: center;
+  margin-top: 15px;
+  align-content: center;
   background-color: lightskyblue;
 }
 
@@ -84,9 +85,16 @@ label {
 .form-group {
   margin-left: 50px;
   margin-bottom: 50px;
+  margin-right: 50px;
+  z-index: 3;
   
 }
 
 body {
     background-color: lavender;
 }
+
+.footer {
+  bottom: 0%;
+}
+

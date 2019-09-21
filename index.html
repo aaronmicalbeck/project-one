@@ -31,20 +31,21 @@
   </head>
 
   <body>
+      <div class="container-fluid">
     <!--Jumbotron-->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <!-- <div class="container"> -->
             <h1 class="display-4">Rhythm Radar</h1>
             <p class="lead">Don't be lost in a sea of sound. We'll get you rocking out no matter where you are!</p>
             <!--This form is the input for the user to grab results from GoogleMaps-->
             <form>
                 <h3> Tell Us Where You'd Like To Go </h3>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-lg-3 col-md-4 col-sm-6">
                         <label for="inputCity">City</label>
                         <input type="text" class="form-control" id="inputCity">
                     </div>
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-lg-2 col-md-2 col-sm-6">
                         <label for="inputState">State</label>
                         <select id="inputState" class="form-control">
                             <option selected>Choose...</option>
@@ -107,7 +108,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        <!-- </div> -->
     </div>
 
     <div class="container">
@@ -144,6 +145,19 @@
         </div>
 
     </div>
+</div>
+
+    <footer class="footer bg-dark text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        Copyright&copy Team Jamz
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--div with table to be dynamically generated in js-->
     <div id="div1">
 
@@ -174,17 +188,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWyV2zxsVly2hGTX_tUakCJvqQUgfqY3E&callback=initMap">
         </script>
 
-    <footer class="footer bg-dark text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p>
-                        Copyright&copy Team Jamz
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
 </body>
 
