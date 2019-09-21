@@ -13,9 +13,16 @@ function drawTable(arr) {
   //           <tbody id="tBody"></tbody>
   //       </table>
 
-  $("#div1").empty();  
-$(`#div1`).append($(`<table>`).attr(`id`, `theTable`,).addClass(`table table-dark`));
+  $("#div1").empty();
+  $(`#div1`).append($(`<table>`).attr(`id`, `theTable`).addClass(`table table-dark`));
   // replicate table structure from above
+  var headingRow = $("<tr>");
+  let h1 = $("<th>").text("Venue");
+  let h2 = $("<th>").text("Location");
+  let h3 = $("<th>").text("Distance");
+  headingRow.append(h1, h2, h3);
+  $("#theTable").append(headingRow);
+
 
   // creates R rows with 3 columns for the following queries: venue name, address, and distance away from the center of map
   for (var r = 0; r < arr.length; r++) {
@@ -24,7 +31,7 @@ $(`#div1`).append($(`<table>`).attr(`id`, `theTable`,).addClass(`table table-dar
     let c2 = $("<td>").text(arr[r].venue.location.formattedAddress[0] + `, ` + arr[r].venue.location.formattedAddress[1]);
     let c3 = $("<td>").text(arr[r].venue.location.distance + ` feet`);
     // create cells in row
-    
+
     row.append(c1);
     row.append(c2);
     row.append(c3);
@@ -47,6 +54,9 @@ function getInput() {
     .val()
     .trim();
 
+  $("#inputCity").val("");
+  $("#inputState").val("");
+
   const settings1 = {
     async: true,
     crossDomain: true,
@@ -59,7 +69,7 @@ function getInput() {
   };
 
   // AJAX call that gets the longitude and latitude of the query
-  $.ajax(settings1).done(function(response) {
+  $.ajax(settings1).done(function (response) {
     console.log(response.Results);
     let longitude = Number(response.Results[0].lon);
     let latitude = Number(response.Results[0].lat);
@@ -67,13 +77,14 @@ function getInput() {
     // $(`#latitude`).text(`Latitude: ${latitude}`);
     initMap(latitude, longitude);
     fourSquare(latitude, longitude);
+
   });
 }
 
-$(`.btn`).on(`click`, function(event){
+$(`.btn`).on(`click`, function (event) {
   event.preventDefault();
   let table = $(`table`);
-  if (table){
+  if (table) {
     table.empty();
     console.log(table);
   }
@@ -103,10 +114,10 @@ function createMarkers(latitude, longitude) {
 function fourSquare(latitude, longitude) {
   fetch(
     `https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40COJNGJ35QB2ZRQBZ3RZU33HGFBCEKLK&client_secret=USPSYAGMLHKZJLEUWVN02IVMVWSLOMWUJDJAIKV22O5YZHHY&v=20180323&limit=12&ll=` +
-      latitude +
-      `,` +
-      longitude +
-      `&query=venues`
+    latitude +
+    `,` +
+    longitude +
+    `&query=venues`
   )
     .then(response => response.json())
     .then(data => {
@@ -129,6 +140,6 @@ function fourSquare(latitude, longitude) {
 
 
 
-    
-    
+
+
 
