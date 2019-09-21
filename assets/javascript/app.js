@@ -86,7 +86,7 @@ function getInput() {
   });
 }
 
-$(`.btn`).on(`click`, function(event) {
+$(`#submitButton`).on(`click`, function (event) {
   event.preventDefault();
   let table = $(`table`);
   if (table) {
@@ -95,6 +95,12 @@ $(`.btn`).on(`click`, function(event) {
   }
   getInput();
 });
+
+$(`#openMap`).on(`click`, function (event) {
+  event.preventDefault();
+  getInput();
+});
+
 // GOOGLE MAPS API
 
 function initMap(latitude, longitude) {
@@ -103,7 +109,7 @@ function initMap(latitude, longitude) {
     zoom: 13,
     center: { lat: latitude, lng: longitude }
   };
-  map = new google.maps.Map(document.getElementById(`map`), options);
+  map = new google.maps.Map(document.getElementById(`map_canvas`), options);
 }
 function createMarkers(latitude, longitude) {
   let marker = new google.maps.Marker({
