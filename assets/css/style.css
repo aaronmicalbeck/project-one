@@ -21,14 +21,12 @@ td {
 }
 
 .jumbotron {
-  background-image: url("https://wallpaper-gallery.net/images/music-background-pictures/music-background-pictures-9.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  
-  position: relative;
-  z-index: 1;
+    background-image: url("https://wallpaper-gallery.net/images/music-background-pictures/music-background-pictures-9.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
 }
 
 .jumbotron::after {
