@@ -1,20 +1,16 @@
 console.log(`JavaScript is working!`);
+// GLOBAL VARIABLES
 let map;
-
+//
 
 // This function dynamically generates the table after hitting the submit button
 function drawTable(arr) {
-  // <table class="table table-dark">
-  //           <tr>
-  //               <th>Venue</th>
-  //               <th>Location</th>
-  //               <th>Distance</th>
-  //           </tr>
-  //           <tbody id="tBody"></tbody>
-  //       </table>
-
   $("#div1").empty();
-  $(`#div1`).append($(`<table>`).attr(`id`, `theTable`).addClass(`table table-dark`));
+  $(`#div1`).append(
+    $(`<table>`)
+      .attr(`id`, `theTable`)
+      .addClass(`table table-dark`)
+  );
   // replicate table structure from above
   var headingRow = $("<tr>");
   let h1 = $("<th>").text("Venue");
@@ -23,15 +19,18 @@ function drawTable(arr) {
   headingRow.append(h1, h2, h3);
   $("#theTable").append(headingRow);
 
-
   // creates R rows with 3 columns for the following queries: venue name, address, and distance away from the center of map
   for (var r = 0; r < arr.length; r++) {
     var row = $("<tr>");
     let c1 = $("<td>").text(arr[r].venue.name);
-    let c2 = $("<td>").text(arr[r].venue.location.formattedAddress[0] + `, ` + arr[r].venue.location.formattedAddress[1]);
+    let c2 = $("<td>").text(
+      arr[r].venue.location.formattedAddress[0] +
+        `, ` +
+        arr[r].venue.location.formattedAddress[1]
+    );
     let c3 = $("<td>").text(arr[r].venue.location.distance + ` feet`);
-    // create cells in row
 
+    // create cells in row
     row.append(c1);
     row.append(c2);
     row.append(c3);
@@ -40,12 +39,11 @@ function drawTable(arr) {
   }
 }
 
-// SUBMIT FUNCTION THAT DOES IT ALLLLL
+// SUBMIT FUNCTION THAT DOES IT ALL!
 
 function getInput() {
   event.preventDefault();
-  console.log(`button is working`);
-  // $(`#inputCity`).empty();
+  // console.log(`button is working`);
 
   let cityInput = $(`#inputCity`)
     .val()
@@ -57,6 +55,7 @@ function getInput() {
   $("#inputCity").val("");
   $("#inputState").val("");
 
+  // Latitude and Longitude API
   const settings1 = {
     async: true,
     crossDomain: true,
@@ -68,20 +67,16 @@ function getInput() {
     }
   };
 
-  // AJAX call that gets the longitude and latitude of the query
-  $.ajax(settings1).done(function (response) {
+  $.ajax(settings1).done(function(response) {
     console.log(response.Results);
     let longitude = Number(response.Results[0].lon);
     let latitude = Number(response.Results[0].lat);
-    // $(`#longitude`).text(`Longitude: ${longitude}`);
-    // $(`#latitude`).text(`Latitude: ${latitude}`);
     initMap(latitude, longitude);
     fourSquare(latitude, longitude);
-
   });
 }
 
-$(`#submitButton`).on(`click`, function (event) {
+$(`#submitButton`).on(`click`, function(event) {
   event.preventDefault();
   let table = $(`table`);
   if (table) {
@@ -89,10 +84,10 @@ $(`#submitButton`).on(`click`, function (event) {
     console.log(table);
   }
   getInput();
-
 });
 
-$(`#openMap`).on(`click`, function (event) {
+// Modal OnClick Event
+$(`#openMap`).on(`click`, function(event) {
   event.preventDefault();
   getInput();
 });
@@ -116,14 +111,13 @@ function createMarkers(latitude, longitude) {
 
 // FOURSQUARE API
 
-
 function fourSquare(latitude, longitude) {
   fetch(
     `https://api.foursquare.com/v2/venues/explore?client_id=R3BQG1QOQ5EGU1J40COJNGJ35QB2ZRQBZ3RZU33HGFBCEKLK&client_secret=USPSYAGMLHKZJLEUWVN02IVMVWSLOMWUJDJAIKV22O5YZHHY&v=20180323&limit=12&ll=` +
-    latitude +
-    `,` +
-    longitude +
-    `&query=venues`
+      latitude +
+      `,` +
+      longitude +
+      `&query=venues`
   )
     .then(response => response.json())
     .then(data => {
@@ -138,14 +132,3 @@ function fourSquare(latitude, longitude) {
       drawTable(data.response.groups[0].items);
     });
 }
-
-
-
-
-
-
-
-
-
-
-
