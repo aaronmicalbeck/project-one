@@ -15,6 +15,7 @@ body {
 #theTable {
     border-collapse:collapse;
     border:1px solid #7f7f7f;
+    margin-bottom: 75px;
 }
 
 td {
@@ -96,6 +97,16 @@ body {
 }
 
 .modalContainer {
+    justify-content: center;
+    align-content: center;
+}
+
+.mapCol {
+    justify-content: center;
+    align-content: center;
+}
+
+.mapContainer {
     justify-content: center;
     align-content: center;
 }
