@@ -26,7 +26,7 @@ function drawTable(arr) {
     let c2 = $("<td>").text(
       arr[r].venue.location.formattedAddress[0] +
         `, ` +
-        arr[r].venue.location.formattedAddress[1]
+      arr[r].venue.location.formattedAddress[1]
     );
     let c3 = $("<td>").text(arr[r].venue.location.distance + ` feet`);
 
