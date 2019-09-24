@@ -101,8 +101,12 @@ body {
     align-content: center;
 }
 
-.footer {
-    bottom: 0%;
-    position: fixed;
-    width: 100%;
+.mapCol {
+    justify-content: center;
+    align-content: center;
+}
+
+.mapContainer {
+    justify-content: center;
+    align-content: center;
 }
