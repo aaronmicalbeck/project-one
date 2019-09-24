@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 #map {
     height: 400px;
     width: 100%;
@@ -73,10 +77,25 @@ h1, p, h3, label {
 }
 
 .form-group {
-    margin-left: 50px;
+    margin-left: 0px;
     margin-bottom: 50px;
 }
 
 body {
     background-color: lavender;
+}
+
+.submitRow {
+    justify-content: center;
+    align-content: center;
+}
+
+.submitCol {
+    justify-content: center;
+    align-content: center;
+}
+
+.modalContainer {
+    justify-content: center;
+    align-content: center;
 }
