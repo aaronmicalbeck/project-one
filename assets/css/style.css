@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 #map {
     height: 400px;
     width: 100%;
@@ -11,6 +15,7 @@
 #theTable {
     border-collapse:collapse;
     border:1px solid #7f7f7f;
+    margin-bottom: 75px;
 }
 
 td {
@@ -77,10 +82,35 @@ h1, p, h3, label {
 }
 
 .form-group {
-    margin-left: 50px;
+    margin-left: 0px;
     margin-bottom: 50px;
 }
 
 body {
     background-color: lavender;
+}
+
+.submitRow {
+    justify-content: center;
+    align-content: center;
+}
+
+.submitCol {
+    justify-content: center;
+    align-content: center;
+}
+
+.modalContainer {
+    justify-content: center;
+    align-content: center;
+}
+
+.mapCol {
+    justify-content: center;
+    align-content: center;
+}
+
+.mapContainer {
+    justify-content: center;
+    align-content: center;
 }

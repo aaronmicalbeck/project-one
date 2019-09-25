@@ -94,8 +94,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
+                <div class="form-group submitRow">
+                    <div class="col-sm-12 submitCol">
                         <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
                     </div>
                 </div>
@@ -103,11 +103,19 @@
         </div>
     </div>
 
-    <div class="container">
+    
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="openMap" data-target="#myModal">Open
-            Map</button>
+        <div class="container">
+        <div class="form-group mapRow">
+            <div class="col-sm-12 mapCol">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" id="openMap"
+                    data-target="#myModal">Open
+                    Map</button>
+            </div>
+        </div>
+</div>
 
+<div class="modalContainer">
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -160,17 +168,6 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWyV2zxsVly2hGTX_tUakCJvqQUgfqY3E&callback=initMap">
         </script>
 
-    <footer class="footer bg-dark text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p>
-                        Copyright&copy Team Jamz
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
